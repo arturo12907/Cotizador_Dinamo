@@ -1,0 +1,141 @@
+/* Estilos generales para el cotizador */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+}
+
+/* Estilos para impresión */
+@media print {
+    .no-print {
+        display: none;
+    }
+    .print-only {
+        display: block;
+    }
+}
+
+.print-only {
+    display: none;
+}
+
+/* Estilos personalizados para elementos de la interfaz */
+.page-break {
+    page-break-after: always;
+}
+
+/* Color principal amarillo dorado para elementos destacados */
+.highlight-color {
+    color: #FEC506;
+}
+
+.highlight-border {
+    border-color: #FEC506;
+}
+
+.highlight-bg {
+    background-color: rgba(254, 197, 6, 0.1);
+}
+
+/* Color secundario azul marino para textos importantes */
+.primary-color {
+    color: #003366;
+}
+
+.primary-bg {
+    background-color: #003366;
+}
+
+/* Estilos para los botones */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(254, 197, 6, 0.3);
+}
+
+/* Animación sutil para acciones del usuario */
+@keyframes highlight {
+    0% { background-color: rgba(254, 197, 6, 0.2); }
+    100% { background-color: transparent; }
+}
+
+.highlight-animation {
+    animation: highlight 1.5s;
+}
+
+/* Estilos para tablas */
+table th {
+    font-weight: 500;
+}
+
+/* Estilos para inputs con foco */
+input:focus, textarea:focus {
+    border-color: #FEC506;
+    box-shadow: 0 0 0 3px rgba(254, 197, 6, 0.2);
+}
+
+/* Estilos para tooltips y elementos de ayuda */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Manejo de galerías de imágenes */
+.image-container {
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.02);
+}
+
+/* Estilos específicos para precios y montos */
+.currency-value {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Estilos para notificaciones */
+.notification {
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.notification-success {
+    background-color: rgba(72, 187, 120, 0.1);
+    color: #2f855a;
+    border-left: 4px solid #48bb78;
+}
+
+.notification-warning {
+    background-color: rgba(254, 197, 6, 0.1);
+    color: #975a16;
+    border-left: 4px solid #FEC506;
+}
+
+.notification-error {
+    background-color: rgba(229, 62, 62, 0.1);
+    color: #c53030;
+    border-left: 4px solid #e53e3e;
+}
